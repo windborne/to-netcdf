@@ -1,5 +1,4 @@
 # to-netcdf
-# to_prepbufr
 
 This utility queries the [WindBorne API](https://windbornesystems.com/docs/api) and converts the files to prepbufr.
 While it works out of the box, we encourage you to adapt it to your needs.
@@ -16,7 +15,7 @@ You will need the following other dependencies (which may well exist on your sys
 
 From here, you should be able to go back to wherever this repository lives and run:
 ```bash
-python3 wb_to_netcdf.py
+python3 wb_to_netcdf.py --help
 ```
 
 ## Assumptions
