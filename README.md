@@ -12,6 +12,8 @@ You will need the following other dependencies (which may well exist on your sys
 1. numpy (`pip3 install numpy`)
 2. pandas (`pip3 install pandas`)
 3. xarray (`pip3 install xarray`)
+4. PyJWT (`pip3 install PyJWT`)
+5. scipy (`pip3 install scipy`)
 
 From here, you should be able to go back to wherever this repository lives and run:
 ```bash

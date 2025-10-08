@@ -84,7 +84,7 @@ def convert_to_netcdf(data, mission_name, curtime, bucket_hours ):
     ds = ds.assign_coords(time=("time", ds['time'].data))
 
     # Now that calculations are done, remove variables not needed in the netcdf output
-    ds = ds.drop_vars(['humidity', 'speed_u', 'speed_v', 'speed_x', 'speed_y', 'specific_humidity',
+    ds = ds.drop_vars(['humidity', 'speed_u', 'speed_v', 'specific_humidity',
                        'timestamp', 'mission_name'])
 
     # Rename the variables
@@ -158,7 +158,7 @@ def main():
     """
 
     parser = argparse.ArgumentParser(description="""
-    Retrieves WindBorne data and output to prep netcdf format.
+    Retrieves WindBorne data and output to netcdf format.
     
     Files will be broken up into time buckets as specified by the --bucket_hours option, 
     and the output file names will contain the time at the mid-point of the bucket. For 
@@ -167,7 +167,7 @@ def main():
     """, formatter_class=argparse.RawTextHelpFormatter)
 
     parser.add_argument("times", nargs='+',
-                        help='Starting and ending times to retrieve obs.  Format: YY-mm-dd_HH:MM '
+                        help='Starting and ending times to retrieve obs.  Format: YYYY-mm-dd_HH:MM '
                              'Ending time is optional, with current time used as default')
     parser.add_argument('-b', '--bucket_hours', type=float, default=6.0,
                         help='Number of hours of observations to accumulate into a file before opening the next file')
